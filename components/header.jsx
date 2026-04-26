@@ -2,7 +2,6 @@ import { checkUser } from '@/lib/checkUser';
 import React from "react";
 import { Button } from "./ui/button";
 import {
-  PenBox,
   LayoutDashboard,
   FileText,
   GraduationCap,
@@ -18,7 +17,6 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import Image from "next/image";
-
 
 export default async function Header() {
   await checkUser();
@@ -61,6 +59,7 @@ export default async function Header() {
                   <ChevronDown className="h-4 w-4" />
                 </Button>
               </DropdownMenuTrigger>
+
               <DropdownMenuContent align="end" className="w-48">
                 <DropdownMenuItem asChild>
                   <Link href="/resume" className="flex items-center gap-2">
@@ -68,15 +67,7 @@ export default async function Header() {
                     Build Resume
                   </Link>
                 </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link
-                    href="/ai-cover-letter"
-                    className="flex items-center gap-2"
-                  >
-                    <PenBox className="h-4 w-4" />
-                    Cover Letter
-                  </Link>
-                </DropdownMenuItem>
+
                 <DropdownMenuItem asChild>
                   <Link href="/interview" className="flex items-center gap-2">
                     <GraduationCap className="h-4 w-4" />
